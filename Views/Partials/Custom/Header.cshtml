@@ -1,0 +1,87 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.PublishedCache
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Models.Blocks;
+
+@inject IVariationContextAccessor VariationContextAccessor
+@inject IPublishedContentCache PublishedContentCache
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@{
+  var siteSettings = Umbraco.ContentAtRoot()
+  .FirstOrDefault(x => x.ContentType.Alias == "siteSettings");
+
+  var companyName = siteSettings?.Value<string>("companyName") ?? "(empty)";
+  var navigation = siteSettings?.Value<IEnumerable<BlockGridItem>>("mainNavigation");
+}
+
+
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="text-2xl font-extrabold text-[#0A2F5A] tracking-tight">@companyName</div>
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-[15px]">
+      @foreach (var nav in navigation)
+      {
+        var el = nav.Content as NavigationGroup;
+        var link = el.Link;
+        @if (!el.Special)
+        {
+          <a href="@link.Url" 
+                    class=" hover:text-[#00C9FF]">
+            @link.Name
+          </a>
+        }
+        else
+        {
+          <a href="@link.Url"
+            class="ml-2 bg-gradient-to-r from-[#6C63FF] to-[#00C9FF] text-white px-4 py-2 rounded-full shadow-md">
+            @link.Name
+          </a>
+        }
+
+      }
+    </nav>
+    @* @await Html.GetBlockGridHtmlAsync(siteSettings, "mainNavigation") *@
+    <!-- Mobile toggle -->
+    <button id="menuToggle" aria-label="Toggle menu"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200">
+      <span class="w-5 h-5">≡</span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden border-t border-gray-100 hidden">
+    <nav class="px-6 py-4 flex flex-col gap-4 bg-white">
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#home"
+        class="hover:text-[#00C9FF]">Home</a>
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#solutions"
+        class="hover:text-[#00C9FF]">Solutions</a>
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#products"
+        class="hover:text-[#00C9FF]">Products</a>
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#industries"
+        class="hover:text-[#00C9FF]">Industries</a>
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#about"
+        class="hover:text-[#00C9FF]">About Us</a>
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#contact"
+        class="hover:text-[#00C9FF]">Contact</a>
+      <a onclick="document.getElementById('mobileMenu').classList.add('hidden')" href="#contact"
+        class="bg-gradient-to-r from-[#6C63FF] to-[#00C9FF] text-white px-4 py-2 rounded-full text-center">Get in
+        Touch</a>
+    </nav>
+  </div>
+</header>
+
+<script src="scripts/header.js">
+  console.log(abs)
+</script>

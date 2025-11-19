@@ -1,0 +1,37 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mekashron — Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Mekashron creates scalable platforms with 20+ years of development experience and AI expertise."/>
+  <link rel="icon" href="assets/images/product_mekashron_crm.svg" type="image/svg+xml"/>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900">
+  <!-- Header -->
+  @await Html.PartialAsync("Custom/Header")
+   
+
+  @RenderBody()
+@await Html.PartialAsync("Custom/Footer")
+  <!-- Footer -->
+  
+
+  
+</body>
+</html>
+

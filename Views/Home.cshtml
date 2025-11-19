@@ -1,0 +1,131 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Models.Blocks;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  Layout = "SiteSettings.cshtml";
+  @* var heroImage = Model.Value<MediaWithCrops>("heroImage"); *@
+  var home = Model as HomePage;
+}
+
+
+<section id="home" class="relative bg-[#0A2F5A] text-white min-h-[90vh] flex items-center">
+  <div
+    class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#00C9FF33,_transparent_50%),radial-gradient(ellipse_at_bottom_left,_#6C63FF33,_transparent_50%)]">
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 py-28 md:py-40 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        @home.Value("heroTitle")
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-white/90 max-w-xl">
+        @home.Value("heroSubtitle")
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="@home.ToSolution.Url"
+          class="bg-white text-[#0A2F5A] px-6 py-3 rounded-full font-semibold hover:bg-gray-100">@home.ToSolution.Name</a>
+        <a href="@home.ToContact.Url"
+          class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-[#0A2F5A]">@home.ToContact.Name</a>
+
+
+      </div>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+      <img src="@home.HeroImage.MediaUrl()" alt="Abstract AI network" class="w-full h-full object-cover" />
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="bg-[#F7F9FC] py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0A2F5A]">@home.SolutionTitle</h2>
+    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">@home.SolutionSubtitle</p>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      @foreach (var card in home.SolutionCards)
+      {
+        var solution = card.Content as Card;
+        <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow text-left">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold mb-2 text-[#0A2F5A]">@solution.Title</h3>
+          <p class="text-gray-600">@solution.Subtitle</p>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
+
+
+<section id="products" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0A2F5A]">@home.ProductTitle</h2>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      @foreach (var item in home.ProductCards)
+      {
+        var card = item.Content as ProductCard;
+        <div
+          class="group text-left rounded-2xl overflow-hidden bg-[#F7F9FC] ring-1 ring-gray-100 hover:ring-[#00C9FF] transition">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="@card.Image.MediaUrl()" alt="Profichat.net"
+              class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-[#0A2F5A]">@card.Title</h3>
+            <p class="mt-2 text-gray-600">@card.Subtitle</p>
+            <div class="mt-4 flex gap-4">
+            @if(!card.Special) {
+              <a href="@card.Link.Url" target="_blank" rel="noreferrer"
+                class="inline-flex items-center gap-2 text-[#00C9FF] font-semibold">@card.Link.Name<span>→</span></a>
+            }
+            else {
+              <a href="@card.Link.Url" class="inline-flex items-center gap-2 text-[#6C63FF] font-semibold">@card.Link.Name</a>
+            }
+              
+            </div>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
+
+<section id="industries" class="bg-[#F7F9FC] py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0A2F5A]">@home.IndustryTitle</h2>
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      @foreach (var item in home.IndustryCards)
+      {
+        var card = item.Content as Card;
+        <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition text-left">
+          <h3 class="text-xl font-semibold mb-2 text-[#0A2F5A]">@card.Title</h3>
+          <p class="text-gray-600">@card.Subtitle</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div class="rounded-2xl overflow-hidden shadow ring-1 ring-gray-100">
+      <img src="@home.AboutImage.MediaUrl()" alt="Abstract AI network" class="w-full h-full object-cover"
+        alt="Team working" class="w-full h-full object-cover" />
+    </div>
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#0A2F5A]">@home.AboutTitle</h2>
+      <p class="mt-4 text-gray-700">@home.AboutSubtitle</p>
+      <a href="@home.LearnMore.Url"
+        class="mt-6 inline-block bg-gradient-to-r from-[#6C63FF] to-[#00C9FF] text-white px-6 py-3 rounded-full">@home.LearnMore.Name</a>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="bg-gradient-to-r from-[#6C63FF] to-[#00C9FF] text-white py-20 text-center">
+  <h2 class="text-4xl font-extrabold mb-4">@home.ContactTitle</h2>
+  <p class="mb-8 text-white/90">@home.ContactSubtitle</p>
+  <a href="@home.MailTo.Url"
+    class="bg-white text-[#0A2F5A] px-8 py-3 rounded-full font-semibold hover:bg-gray-100">@home.MailTo.Name</a>
+</section>

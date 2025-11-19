@@ -1,0 +1,53 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.PublishedCache
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Cms.Core.Services.Navigation
+@using Umbraco.Cms.Core.Models.Blocks;
+@inject IVariationContextAccessor VariationContextAccessor
+@inject IPublishedContentCache PublishedContentCache
+@inject IDocumentNavigationQueryService DocumentNavigationQueryService
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+
+@{
+  var siteSettings = Umbraco.ContentAtRoot()
+  .FirstOrDefault(x => x.ContentType.Alias == "siteSettings") as SiteSettings;
+
+ 
+  var navigation = siteSettings?.Value<IEnumerable<BlockGridItem>>("mainNavigation");
+}
+
+<footer class="bg-[#0A2F5A] text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-xl font-bold mb-3">@siteSettings.CompanyName</h3>
+        <p>@siteSettings.Slogan</p>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+       @foreach (var nav in navigation)
+      {
+        var el = nav.Content as NavigationGroup;
+        var link = el.Link;
+        @if (!el.Special)
+        {
+          <a href="@link.Url" 
+                    class="hover:text-[#00C9FF]">
+            @link.Name
+          </a>
+        }
+        else
+        {
+          
+        }
+
+      }
+       
+      </div>
+      <div class="space-y-1">
+        <p>📍 @siteSettings.Adress</p>
+        <p>📧 @siteSettings.Email </p>
+        <p>@siteSettings.Copyright</p>
+      </div>
+    </div>
+  </footer>

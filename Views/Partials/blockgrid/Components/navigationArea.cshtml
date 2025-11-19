@@ -1,0 +1,12 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+@{
+    if (Model?.Areas.Any() != true) { return; }
+}
+
+<nav class="hidden md:flex items-center gap-6 text-[15px]">
+@foreach(var area in Model.Areas)
+{
+    @await Html.GetBlockGridItemAreaHtmlAsync(area)
+}
+</nav>
