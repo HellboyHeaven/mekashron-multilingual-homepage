@@ -1,3 +1,5 @@
 {
-    "editor.defaultFormatter": "blazorlore.blazor-formatter"
+    "editor.defaultFormatter": "blazorlore.blazor-formatter",
+    "appService.defaultWebAppToDeploy": "/subscriptions/8b7e9fb1-4d8e-4689-99bc-7dbd2fc556c2/resourceGroups/mekashron_group/providers/Microsoft.Web/sites/mekashron",
+    "appService.deploySubpath": "bin/Release/net9.0/publish"
 }
