@@ -15,7 +15,6 @@
     </Content> -->
     
     <PackageReference Include="Umbraco.Deploy.OnPrem" Version="16.0.4" />
-    <Content Include="umbraco/Licenses/umbracoDeploy.lic" CopyToOutputDirectory="Always"/>
     <Content Include="TriggerDeploy.ps1" CopyToOutputDirectory="Always"/>
   </ItemGroup>
 

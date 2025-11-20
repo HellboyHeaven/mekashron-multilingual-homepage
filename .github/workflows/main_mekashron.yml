@@ -17,11 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Restore Umbraco License
-        run: |
-          mkdir -p umbraco/Licenses
-          echo umbracoDeploy.lic.b64 | base64 --decode > umbraco/Licenses/umbracoDeploy.lic
+      
+     
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
