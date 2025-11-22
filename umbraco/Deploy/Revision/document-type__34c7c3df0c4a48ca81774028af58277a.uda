@@ -1,0 +1,84 @@
+{
+  "Name": "ProductCard",
+  "Alias": "productCard",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/5e0257df6c82455198daf415bf249394",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d2034bfe-c621-4d3a-860c-eeb481cd1cce",
+      "Name": "Content",
+      "Type": 1,
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "2840db1a-1b99-4559-bddd-a4a5150b9eac",
+          "Alias": "link",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Link",
+          "SortOrder": 3
+        },
+        {
+          "Key": "4799a3e1-b372-4e10-be1e-39f6236c3213",
+          "Alias": "image",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Image"
+        },
+        {
+          "Key": "53a70b52-3dd8-4dd8-a9d3-0d7988c58d61",
+          "Alias": "special",
+          "DataType": "umb://data-type/c042113991ac42e39bba4730a90a6173",
+          "Name": "Special",
+          "SortOrder": 4
+        },
+        {
+          "Key": "ba2d5d77-d002-4e8b-9993-be81ff70ef5e",
+          "Alias": "subtitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Subtitle",
+          "SortOrder": 2
+        },
+        {
+          "Key": "ee230040-32d9-4e0b-98f3-6a65457adcce",
+          "Alias": "title",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/34c7c3df0c4a48ca81774028af58277a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c042113991ac42e39bba4730a90a6173",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/5e0257df6c82455198daf415bf249394",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,100 @@
+{
+  "Name": "Site Settings",
+  "Alias": "siteSettings",
+  "DefaultTemplate": "umb://template/6c697a55b45a4d81bf34c81f28e84def",
+  "AllowedTemplates": [
+    "umb://template/6c697a55b45a4d81bf34c81f28e84def"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-grey",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedAtRoot": true,
+    "AllowedChildContentTypes": [
+      "umb://document-type/cfa79209b47944a9ae6ace9a07808e8d"
+    ]
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "92a82ee0-7d06-41f0-9514-d5bcb0fc023f",
+      "Name": "Header",
+      "Type": 1,
+      "Alias": "header",
+      "PropertyTypes": [
+        {
+          "Key": "b595c892-09b4-4406-bd4b-1115da1f32f3",
+          "Alias": "adress",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Adress",
+          "SortOrder": 4
+        },
+        {
+          "Key": "b6723694-4523-4922-ba5e-eca70e746e36",
+          "Alias": "email",
+          "DataType": "umb://data-type/9887e46a23124ae2ac0ca5bc9832f401",
+          "Name": "Email",
+          "SortOrder": 3,
+          "Validation": "[a-zA-Z0-9_.\u002B-]\u002B@[a-zA-Z0-9-]\u002B\\.[a-zA-Z0-9-.]\u002B"
+        },
+        {
+          "Key": "bae74e3e-f44d-4071-970f-4ceb68435c85",
+          "Alias": "mainNavigation",
+          "DataType": "umb://data-type/5792c865c68d499c997ba7bf92d631bc",
+          "Name": "Main Navigation",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "bebdb86a-927d-4bcb-a2ed-1f65489edbfc",
+          "Alias": "slogan",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Slogan",
+          "SortOrder": 5,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "e14421c5-e6ad-44f3-9c85-ca06decd3a90",
+          "Alias": "companyName",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Company Name",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e25d2558-2953-4857-99a4-86d69125abef",
+          "Alias": "copyright",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Copyright",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/03cdc1499c5d46039c89c8cd2e32eb4f",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5792c865c68d499c997ba7bf92d631bc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9887e46a23124ae2ac0ca5bc9832f401",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/cfa79209b47944a9ae6ace9a07808e8d",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/6c697a55b45a4d81bf34c81f28e84def",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

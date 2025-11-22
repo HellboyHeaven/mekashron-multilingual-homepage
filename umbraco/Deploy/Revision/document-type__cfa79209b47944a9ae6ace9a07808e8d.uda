@@ -1,0 +1,249 @@
+{
+  "Name": "HomePage",
+  "Alias": "homePage",
+  "DefaultTemplate": "umb://template/fb66633982f64bcf95c3129b41ca5439",
+  "AllowedTemplates": [
+    "umb://template/fb66633982f64bcf95c3129b41ca5439"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-home",
+  "Thumbnail": "folder.png",
+  "Description": "Landscape",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedAtRoot": true,
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "2910bbf1-74d1-42f7-890d-423b3fba2367",
+      "Name": "Industries",
+      "SortOrder": 5,
+      "Type": 1,
+      "Alias": "industries",
+      "PropertyTypes": [
+        {
+          "Key": "26fc10e4-31e9-437b-b16e-e2a99e436d83",
+          "Alias": "industryCards",
+          "DataType": "umb://data-type/81584c3cbd174ea99d7d7bbc74608450",
+          "Name": "Cards",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "295d4bfa-0bd1-4c64-b7a7-d496d1e5f888",
+          "Alias": "industryTitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "6a4a6b88-92c9-4c8e-95ac-15e5a7805574",
+      "Name": "Solutions",
+      "SortOrder": 3,
+      "Type": 1,
+      "Alias": "solutions",
+      "PropertyTypes": [
+        {
+          "Key": "1f6b8cbc-febd-4656-bb17-c970ecd78a35",
+          "Alias": "solutionSubtitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "SubTitle",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "93fc1ac6-aad7-4964-97d1-ff819bcb7492",
+          "Alias": "solutionTitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "ccf2e038-6512-479c-bf49-b2ae8632ad4a",
+          "Alias": "solutionCards",
+          "DataType": "umb://data-type/81584c3cbd174ea99d7d7bbc74608450",
+          "Name": "Cards",
+          "SortOrder": 2,
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "7fc200f1-4b67-47f6-809b-48e8b251eb2e",
+      "Name": "About",
+      "SortOrder": 6,
+      "Type": 1,
+      "Alias": "about",
+      "PropertyTypes": [
+        {
+          "Key": "06d4ad0a-3947-4d7d-bb89-a542c8a9c187",
+          "Alias": "learnMore",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Learn More",
+          "SortOrder": 3,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "3209b5dc-f5e6-4847-a239-869ad061fa16",
+          "Alias": "aboutTitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "446cad63-e5cd-4801-b5a7-4127d61537a0",
+          "Alias": "aboutImage",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Image",
+          "SortOrder": 2
+        },
+        {
+          "Key": "e61d5c3a-5bc7-4697-b675-63abb59249a8",
+          "Alias": "aboutSubtitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Subtitle",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "a656b0e9-307e-4a3a-8f8e-66a4ea5e1fd9",
+      "Name": "Hero",
+      "SortOrder": 2,
+      "Type": 1,
+      "Alias": "hero",
+      "PropertyTypes": [
+        {
+          "Key": "5b87683e-2199-44dc-9747-6bfb8d4ee494",
+          "Alias": "heroImage",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Image"
+        },
+        {
+          "Key": "ad33183b-9991-433c-b3f1-df388a22f047",
+          "Alias": "heroTitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "c0f999e6-01c5-4d47-9bc1-90d99f6a04db",
+          "Alias": "toSolution",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "To Solution",
+          "SortOrder": 3,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "cb108894-072f-4bd8-ab6f-ef0b89856bbb",
+          "Alias": "toContact",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "To Contact",
+          "SortOrder": 4,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "f3750575-53a7-4f07-8e3c-14d4cb803719",
+          "Alias": "heroSubtitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Subtitle",
+          "SortOrder": 2,
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "aea72844-2593-41b0-ab7d-9660f32a17de",
+      "Name": "Contact",
+      "SortOrder": 7,
+      "Type": 1,
+      "Alias": "contact",
+      "PropertyTypes": [
+        {
+          "Key": "b64885d3-77a9-49b0-ab6c-baa3f6dc20af",
+          "Alias": "contactSubtitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Subtitle",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "b7c92e3e-5c04-4030-9db3-635803da6e4e",
+          "Alias": "contactTitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "bc20dadf-c61d-495e-9cbb-819745f043ec",
+          "Alias": "mailTo",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Mail To",
+          "SortOrder": 2,
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "d9154b5f-11d4-4c88-bfb1-caba0fe74949",
+      "Name": "Products",
+      "SortOrder": 4,
+      "Type": 1,
+      "Alias": "products",
+      "PropertyTypes": [
+        {
+          "Key": "ac15a35a-192f-4f87-a66d-761b4f4eeac9",
+          "Alias": "productCards",
+          "DataType": "umb://data-type/efc015c3de884138836daff411913c35",
+          "Name": "Product Cards",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "bd7d5c89-52ab-4a84-8c59-67a7f56e3194",
+          "Alias": "productTitle",
+          "DataType": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+          "Name": "Title",
+          "VariesByCulture": true
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/cfa79209b47944a9ae6ace9a07808e8d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0c5ecec6a5a34d49860c1278335ab0bb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/81584c3cbd174ea99d7d7bbc74608450",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/efc015c3de884138836daff411913c35",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/fb66633982f64bcf95c3129b41ca5439",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}
